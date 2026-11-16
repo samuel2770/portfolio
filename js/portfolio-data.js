@@ -157,13 +157,13 @@ const PORTFOLIO_DATA = {
       featured: true,
       tagline: "Live Role-Based Medication Platform for Nigerian Hospitals",
       description: "Capstone platform for Nigerian hospitals, built by a two-person backend team and used by four roles: Admin, Doctor, Pharmacist and Patient. Implemented role-based access with custom guards and JWT, prescription verification, audit logging, and cloud deployment.",
-      liveUrl: "https://medtrail.com.ng",
+      liveUrl: "https://www.medtrail.com.ng",
       githubUrl: null, // Private enterprise repository (protecting IP during development)
       stats: {
         architecture: "NestJS Modular Architecture",
         security: "4-Tier RBAC + JWT",
         caching: "Redis In-Memory Engine",
-        liveDomain: "medtrail.com.ng"
+        liveDomain: "www.medtrail.com.ng"
       },
       architecture: [
         "Implemented role-based access with custom guards and JWT; admins invite users, doctors prescribe, pharmacists verify and dispense, and patients view their own records",
