@@ -69,17 +69,17 @@ const PORTFOLIO_DATA = {
   experience: [
     {
       company: "Advantage Health Africa",
-      role: "Backend Developer Intern",
-      location: "Lagos, Nigeria (Hybrid / Production Scale)",
-      period: "2024 — Present",
+      role: "Backend Developer Intern (SIWES)",
+      location: "Lagos, Nigeria",
+      period: "Jul 2026 – Oct 2026",
       badge: "Healthcare Production",
-      description: "Contributed to backend development of healthcare technology solutions, pharmacy Point of Sale (POS) systems, and multi-tenant vendor analytics using NestJS, TypeScript, PostgreSQL, and TypeORM.",
+      description: "Contributed to backend development of healthcare technology solutions, pharmacy Point of Sale (POS) systems, and vendor analytics using NestJS, TypeScript, PostgreSQL, and TypeORM.",
       highlights: [
-        "Engineered the Pharmacy Vendor Partnership Statistics API (GET /v1/vendors/rx/{pharmacyId}/partnerships/stats), consolidating total, active, and inactive supplier data into a single low-latency endpoint.",
-        "Contributed to Pharmacy POS backend services empowering pharmacists to select medications, calculate pricing, log sales transactions, and print itemized customer receipts.",
-        "Modeled normalized relational schemas using TypeORM and PostgreSQL, enforcing strict foreign key constraints and multi-tenant isolation per pharmacy.",
-        "Authored interactive OpenAPI/Swagger endpoint specifications and automated Postman test collections validating edge cases and auth guards.",
-        "Collaborated across engineering, clinical, and QA teams using Git workflows to maintain resilient uptime and strict data integrity standards."
+        "Built pharmacy backend features in NestJS, TypeORM and PostgreSQL: batch editing (quantity, prices, batch number), a staff list per pharmacy, and a live staff-online count.",
+        "Developed the Pharmacy Vendor Partnership Statistics endpoint, returning total, active and inactive suppliers in a single request.",
+        "Researched ML features and evaluation metrics for reorder-quantity recommendations and expiry-risk scoring (LightGBM) as part of the AI/ML effort.",
+        "Worked through Git branches and code review, with each task reviewed by the engineering lead before merging.",
+        "Documented endpoints with Swagger and tested them with Postman."
       ],
       stack: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "REST API", "Swagger", "Postman", "Git"]
     }
@@ -87,23 +87,23 @@ const PORTFOLIO_DATA = {
 
   education: [
     {
-      institution: "AltSchool Africa",
-      program: "Diploma in Software Engineering (Backend Specialization)",
-      period: "2024 — 2025",
-      status: "Completed • Verified Graduate (Pending Certificate Issuance)",
+      institution: "Thomas Adewumi University, Oko-Irese, Kwara State",
+      program: "B.Sc. Software Engineering",
+      period: "Session 2025/2026",
+      status: "In Progress",
       highlights: [
-        "Completed rigorous curriculum in distributed systems, advanced Node.js, NestJS, microservices, and system architecture.",
-        "Architected enterprise capstone projects including the MedTrail Healthcare & Clinical API and microservice modules.",
-        "Graduated with verified completion; official certificate credential awaiting delivery."
+        "Core computing foundations: C, C++, Java, OOP, Data Structures & Algorithms, Operating Systems.",
+        "Active Member, Nigeria Association of Computing Students (NACOS)."
       ]
     },
     {
-      institution: "University / Academic Background",
-      program: "Computer Science & Engineering Foundations",
-      period: "Foundational Academic Studies",
-      status: "Completed",
+      institution: "AltSchool Africa",
+      program: "Backend Engineering Diploma",
+      period: "2025 – 2026",
+      status: "Completed • Verified Graduate",
       highlights: [
-        "Core computing principles: C, C++, Java, Object-Oriented Programming (OOP), and algorithmic problem solving."
+        "Rigorous software engineering curriculum covering Node.js, Express, NestJS, MongoDB, PostgreSQL, system design, and Git.",
+        "Architected enterprise capstone projects including the MedTrail Healthcare & Medication Management API."
       ]
     }
   ],
@@ -152,71 +152,68 @@ const PORTFOLIO_DATA = {
   projects: [
     {
       id: "medtrail-api",
-      title: "MedTrail Healthcare & Clinical API",
+      title: "MedTrail: Medication Management System for Hospitals",
       category: "backend",
       featured: true,
-      tagline: "Enterprise Clinical Workflow & Multi-Role Prescription Management",
-      description: "A comprehensive healthcare backend system engineered to digitize medical operations between doctors, pharmacists, administrators, and patients. Features electronic prescriptions, pharmacy dispensing verification, 4-tier RBAC, Redis caching, and transactional email onboarding.",
-      liveUrl: "https://github.com/samuel2770/MedTrail-Api",
+      tagline: "Live Role-Based Medication Platform for Nigerian Hospitals",
+      description: "Capstone platform for Nigerian hospitals, built by a two-person backend team and used by four roles: Admin, Doctor, Pharmacist and Patient. Implemented role-based access with custom guards and JWT, prescription verification, audit logging, and cloud deployment.",
+      liveUrl: "https://medtrail.com.ng",
       githubUrl: "https://github.com/samuel2770/MedTrail-Api",
       stats: {
         architecture: "NestJS Modular Architecture",
         security: "4-Tier RBAC + JWT",
         caching: "Redis In-Memory Engine",
-        docs: "Interactive Swagger / OpenAPI"
+        liveDomain: "medtrail.com.ng"
       },
       architecture: [
-        "4-Tier Role-Based Access Control (Admin, Doctor, Pharmacist, Patient) with custom NestJS guards and signed JWT tokens",
-        "Electronic prescription generation with pharmacy dispense tracking and clinical audit history",
-        "Redis caching layer for high-throughput roster lookups and rate-limiting mitigation",
-        "Automated user invitation lifecycle with secure, time-sensitive verification tokens via Nodemailer"
+        "Implemented role-based access with custom guards and JWT; admins invite users, doctors prescribe, pharmacists verify and dispense, and patients view their own records",
+        "Added validated DTOs, audit logging and PostgreSQL schema design, and deployed the system to the cloud",
+        "Redis caching layer for high-throughput roster lookups and rate-limiting mitigation"
       ],
-      tags: ["NestJS", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "JWT / RBAC", "Swagger", "Nodemailer"]
+      tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT", "Redis"]
     },
     {
-      id: "advantage-vendor-api",
-      title: "Pharmacy POS & Vendor Partnership Stats API",
+      id: "eventful-api",
+      title: "Eventful: Event Ticketing API",
       category: "backend",
       featured: true,
-      tagline: "Production Healthcare POS & Multi-Tenant Analytics Engine",
-      description: "Engineered at Advantage Health Africa to power pharmacy POS systems and supplier management. Delivers real-time vendor analytics—total vendors, active partnerships, and inactive partnerships—through a single, highly-optimized NestJS endpoint.",
-      liveUrl: "#case-study",
+      tagline: "Secure Ticketing & QR-Code Verification Engine",
+      description: "Deployed API with Paystack payment processing, QR-code ticket scanning, fraud protection, scheduled event notifications, and Redis-cached analytics. Fully documented with interactive Swagger.",
+      liveUrl: "https://github.com/samuel2770",
       githubUrl: "https://github.com/samuel2770",
       stats: {
-        endpoint: "GET /v1/vendors/rx/:id/stats",
-        framework: "NestJS + TypeORM",
-        database: "PostgreSQL Relational",
-        multiTenant: "Pharmacy-ID Scoped"
+        payments: "Paystack Gateway",
+        queues: "BullMQ Job Queues",
+        cache: "Redis Analytics",
+        docs: "Swagger / OpenAPI"
       },
       architecture: [
-        "Pharmacy-scoped multi-tenant data isolation preventing cross-tenant supplier data leakage",
-        "Clean Controller-Service separation ensuring high maintainability and testability",
-        "Optimized TypeORM relational queries returning total, active, and inactive partnership counts in one roundtrip",
-        "Contract-first OpenAPI/Swagger specification and automated Postman test collections"
+        "Integrated Paystack payment gateway with automated webhook verification and idempotent transaction handling",
+        "QR-code ticket generation and verification engine with anti-tampering fraud checks",
+        "Background task queues with BullMQ for scheduled notifications and event reminders"
       ],
-      tags: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "REST API", "Swagger", "Healthcare POS"]
+      tags: ["NestJS", "MongoDB", "Redis", "BullMQ", "Paystack", "Swagger"]
     },
     {
       id: "huddle-api",
-      title: "Huddle Collaboration & Workspace API",
+      title: "Huddle: Team Collaboration Backend",
       category: "backend",
       featured: true,
-      tagline: "Scalable Real-Time Workspace Engine & Chat Architecture",
-      description: "A robust, high-concurrency backend system built to support real-time team collaboration, multi-tenant workspace provisioning, dynamic channel creation, and instant message distribution.",
+      tagline: "Slack-Style Real-Time Workspace & Channel API",
+      description: "Slack-style workspace and channel API; resolved merge conflicts and integrated a teammate's auth module. Features bi-directional WebSocket channels for real-time team messaging and presence pings.",
       liveUrl: "https://huddle-api-90gn.onrender.com",
-      githubUrl: "https://github.com/samuel2770",
+      githubUrl: "https://github.com/samuel2770/Huddle-API",
       stats: {
-        latency: "<45ms average response",
-        protocol: "HTTP/REST + WebSockets",
-        auth: "JWT & Refresh Tokens"
+        architecture: "NestJS + Socket.IO",
+        db: "PostgreSQL Relational",
+        channels: "Real-time WebSockets"
       },
       architecture: [
-        "Multi-tenant workspace isolation with role-based permissions (Owner, Admin, Member)",
+        "Slack-style workspace and channel API; resolved merge conflicts and integrated a teammate's auth module",
         "Bi-directional WebSocket event channels for real-time messaging and status pings",
-        "MongoDB schema with indexed queries for message pagination and thread lookups",
-        "Rate-limiting and request sanitization middleware protecting against DDoS and injections"
+        "Relational PostgreSQL schema with indexed queries for message pagination and thread lookups"
       ],
-      tags: ["Node.js", "Express", "MongoDB", "WebSockets", "JWT", "REST API", "Render"]
+      tags: ["NestJS", "TypeScript", "PostgreSQL", "Socket.IO"]
     },
     {
       id: "restaurant-chatbot",

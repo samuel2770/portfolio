@@ -14,286 +14,208 @@
       box-sizing: border-box;
     }
 
-    :root {
-      --text-primary: #111827;
-      --text-secondary: #374151;
-      --text-muted: #6b7280;
-      --accent: #1d4ed8;
-      --border: #e5e7eb;
-      --bg-subtle: #f9fafb;
-    }
-
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: var(--text-primary);
-      line-height: 1.55;
-      font-size: 10.5pt;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #111827;
+      line-height: 1.45;
+      font-size: 9.8pt;
       background: #ffffff;
+      -webkit-font-smoothing: antialiased;
     }
 
     .cv-page {
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto;
-      padding: 40px 48px;
+      padding: 44px 52px;
+      background: #ffffff;
     }
 
     /* ── HEADER ── */
     .cv-header {
-      margin-bottom: 22px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--text-primary);
+      margin-bottom: 14px;
     }
 
     .cv-name {
-      font-size: 22pt;
+      font-size: 26pt;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 2px;
+      color: #1e3a8a;
+      letter-spacing: -0.6px;
+      line-height: 1.1;
+      margin-bottom: 4px;
     }
 
-    .cv-title {
+    .cv-headline {
       font-size: 11pt;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 10px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 5px;
     }
 
-    .cv-contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 20px;
-      font-size: 9.5pt;
-      color: var(--text-secondary);
+    .cv-contact {
+      font-size: 9.2pt;
+      color: #4b5563;
+      line-height: 1.5;
     }
 
-    .cv-contact-row a {
-      color: var(--accent);
+    .cv-contact a {
+      color: #1f2937;
       text-decoration: none;
     }
 
-    .cv-contact-row span::before {
-      content: "•";
-      margin-right: 6px;
-      color: var(--text-muted);
+    .cv-contact a:hover {
+      text-decoration: underline;
+      color: #1e3a8a;
     }
 
-    .cv-contact-row span:first-child::before {
-      content: "";
-      margin-right: 0;
+    .sep {
+      margin: 0 6px;
+      color: #9ca3af;
     }
 
     /* ── SECTIONS ── */
     .cv-section {
-      margin-bottom: 18px;
+      margin-top: 13px;
     }
 
     .cv-section-title {
       font-size: 10.5pt;
       font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: var(--text-primary);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 4px;
-      margin-bottom: 10px;
+      border-bottom: 1px solid #111827;
+      padding-bottom: 2px;
+      margin-bottom: 7px;
     }
 
     /* ── SUMMARY ── */
     .cv-summary {
-      font-size: 10pt;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-
-    /* ── EXPERIENCE / EDUCATION ENTRIES ── */
-    .cv-entry {
-      margin-bottom: 14px;
-    }
-
-    .cv-entry-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-bottom: 3px;
-    }
-
-    .cv-entry-role {
-      font-size: 10.5pt;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .cv-entry-period {
-      font-size: 9.5pt;
-      font-weight: 500;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-
-    .cv-entry-org {
-      font-size: 10pt;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .cv-entry-location {
-      font-size: 9pt;
-      color: var(--text-muted);
-    }
-
-    .cv-entry-bullets {
-      list-style: none;
-      padding: 0;
-    }
-
-    .cv-entry-bullets li {
-      padding-left: 14px;
-      position: relative;
-      font-size: 10pt;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 3px;
-    }
-
-    .cv-entry-bullets li::before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    /* ── PROJECTS ── */
-    .cv-project {
-      margin-bottom: 12px;
-    }
-
-    .cv-project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-bottom: 2px;
-    }
-
-    .cv-project-name {
-      font-size: 10.5pt;
-      font-weight: 700;
-    }
-
-    .cv-project-stack {
-      font-size: 9pt;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .cv-project-desc {
-      font-size: 10pt;
-      color: var(--text-secondary);
-      margin-bottom: 3px;
-    }
-
-    .cv-project-bullets {
-      list-style: none;
-      padding: 0;
-    }
-
-    .cv-project-bullets li {
-      padding-left: 14px;
-      position: relative;
-      font-size: 9.5pt;
-      color: var(--text-secondary);
-      line-height: 1.55;
-      margin-bottom: 2px;
-    }
-
-    .cv-project-bullets li::before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .cv-project-link {
-      font-size: 9pt;
-      color: var(--accent);
-      text-decoration: none;
+      font-size: 9.4pt;
+      color: #1f2937;
+      line-height: 1.5;
+      text-align: justify;
     }
 
     /* ── SKILLS ── */
-    .cv-skills-grid {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 5px 12px;
-      font-size: 10pt;
-    }
-
-    .cv-skill-label {
-      font-weight: 700;
-      color: var(--text-primary);
-      font-size: 9.5pt;
-    }
-
-    .cv-skill-value {
-      color: var(--text-secondary);
-      font-size: 9.5pt;
-    }
-
-    /* ── CERTIFICATIONS ── */
-    .cv-certs-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .cv-certs-list li {
+    .skills-list {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      padding: 3px 0;
-      font-size: 10pt;
-      border-bottom: 1px solid var(--bg-subtle);
+      flex-direction: column;
+      gap: 3px;
+      font-size: 9.3pt;
+      color: #1f2937;
+      line-height: 1.45;
     }
 
-    .cv-cert-name {
-      font-weight: 600;
-      color: var(--text-primary);
+    .skills-list strong {
+      color: #111827;
+      font-weight: 700;
     }
 
-    .cv-cert-issuer {
+    /* ── EXPERIENCE ── */
+    .exp-item {
+      margin-bottom: 8px;
+    }
+
+    .exp-title-row {
+      font-size: 9.6pt;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .exp-title-row .org {
       font-weight: 400;
-      color: var(--text-muted);
+      color: #374151;
     }
 
-    .cv-cert-date {
-      font-size: 9pt;
-      color: var(--text-muted);
-      white-space: nowrap;
+    /* ── BULLETS ── */
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
     }
 
-    /* ── PRINT ── */
+    .bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      font-size: 9.2pt;
+      color: #1f2937;
+      line-height: 1.45;
+      margin-bottom: 3px;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #111827;
+      font-weight: bold;
+    }
+
+    /* ── PROJECTS ── */
+    .proj-item {
+      margin-bottom: 9px;
+    }
+
+    .proj-title-row {
+      font-size: 9.6pt;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .proj-title-row a {
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .proj-stack {
+      font-size: 8.8pt;
+      color: #4b5563;
+      font-style: italic;
+      margin-bottom: 3px;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-item {
+      margin-bottom: 8px;
+    }
+
+    .edu-title-row {
+      font-size: 9.6pt;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .edu-title-row .school {
+      font-weight: 400;
+      color: #374151;
+    }
+
+    .edu-desc {
+      font-size: 9.2pt;
+      color: #374151;
+      line-height: 1.45;
+    }
+
+    /* ── PRINT MEDIA OPTIMIZATIONS ── */
     @media print {
       body {
-        font-size: 10pt;
+        font-size: 9.4pt;
+        background: #ffffff;
       }
 
       .cv-page {
-        padding: 20px 24px;
+        padding: 0;
         max-width: 100%;
       }
 
-      .cv-contact-row a {
-        color: var(--text-secondary);
+      @page {
+        margin: 12mm 14mm;
+        size: A4 portrait;
       }
 
-      @page {
-        margin: 0.5in;
-        size: A4;
+      .cv-section {
+        break-inside: avoid;
       }
     }
   </style>
@@ -304,186 +226,130 @@
 
     <!-- ═══════════ HEADER ═══════════ -->
     <header class="cv-header">
-      <h1 class="cv-name">SAMUEL ADENIRAN</h1>
-      <div class="cv-title">Backend Developer · NestJS · TypeScript · PostgreSQL · Node.js</div>
-      <div class="cv-contact-row">
-        <span>Lagos, Nigeria</span>
-        <span>+234 916 286 8224</span>
-        <span><a href="mailto:samueladeniran.dev@gmail.com">samueladeniran.dev@gmail.com</a></span>
-        <span><a href="https://github.com/samuel2770">github.com/samuel2770</a></span>
-        <span><a href="https://linkedin.com/in/adeniran-samuel-8432732b7">LinkedIn</a></span>
-        <span><a href="https://samuel2770.github.io/portfolio">Portfolio</a></span>
+      <h1 class="cv-name">Samuel Adeniran</h1>
+      <div class="cv-headline">Backend Developer · NestJS · TypeScript · PostgreSQL</div>
+      <div class="cv-contact">
+        Lagos, Nigeria <span class="sep">·</span> +234 916 286 8224 <span class="sep">·</span> <a href="mailto:samueladeniran.dev@gmail.com">samueladeniran.dev@gmail.com</a>
+      </div>
+      <div class="cv-contact">
+        <a href="https://linkedin.com/in/adeniran-samuel-8432732b7" target="_blank">linkedin.com/in/adeniran-samuel-8432732b7</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/samuel2770" target="_blank">github.com/samuel2770</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/samuel2770/portfolio" target="_blank">github.com/samuel2770/portfolio</a>
+        <span class="sep">·</span>
+        <a href="https://medtrail.com.ng" target="_blank">medtrail.com.ng</a>
       </div>
     </header>
 
-    <!-- ═══════════ PROFESSIONAL SUMMARY ═══════════ -->
+    <!-- ═══════════ SUMMARY ═══════════ -->
     <section class="cv-section">
-      <h2 class="cv-section-title">Professional Summary</h2>
+      <h2 class="cv-section-title">Summary</h2>
       <p class="cv-summary">
-        Backend developer with hands-on experience building healthcare technology platforms at Advantage Health Africa using NestJS, TypeScript, PostgreSQL, and TypeORM. Trained in backend engineering at AltSchool Africa with a focus on scalable REST APIs, relational database modeling, real-time systems, and multi-tenant architectures. Comfortable with MongoDB, WebSockets, and API documentation tooling (Swagger, Postman). Open to backend, full-stack, and systems engineering roles.
+        Backend developer who builds secure, well-structured REST APIs with NestJS, TypeScript and PostgreSQL. Gained industry experience as a backend intern at Advantage Health Africa working on pharmacy systems, and built MedTrail, a live role-based medication management platform for Nigerian hospitals. Open to backend and full-stack roles.
       </p>
     </section>
 
-    <!-- ═══════════ TECHNICAL SKILLS ═══════════ -->
+    <!-- ═══════════ SKILLS ═══════════ -->
     <section class="cv-section">
-      <h2 class="cv-section-title">Technical Skills</h2>
-      <div class="cv-skills-grid">
-        <span class="cv-skill-label">Languages</span>
-        <span class="cv-skill-value">TypeScript, JavaScript (ES6+), Java, C, C++</span>
-
-        <span class="cv-skill-label">Backend</span>
-        <span class="cv-skill-value">NestJS, Node.js, Express.js, REST APIs, WebSockets (Socket.IO)</span>
-
-        <span class="cv-skill-label">Databases</span>
-        <span class="cv-skill-value">PostgreSQL, MongoDB, MySQL, Mongoose ODM, TypeORM</span>
-
-        <span class="cv-skill-label">Auth & Security</span>
-        <span class="cv-skill-value">JWT, bcrypt, Role-Based Access Control (RBAC), CORS, Helmet</span>
-
-        <span class="cv-skill-label">Tools</span>
-        <span class="cv-skill-value">Git, GitHub, Postman, Swagger / OpenAPI, Redis, Nodemailer, Render</span>
-
-        <span class="cv-skill-label">Concepts</span>
-        <span class="cv-skill-value">API Design, Multi-Tenant Architecture, Database Normalization, Event-Driven Systems, CI/CD</span>
+      <h2 class="cv-section-title">Skills</h2>
+      <div class="skills-list">
+        <div><strong>Backend:</strong> NestJS, TypeScript, Node.js, Express.js, REST API design, WebSockets (Socket.IO)</div>
+        <div><strong>Databases:</strong> PostgreSQL (TypeORM, schema design, normalization), MongoDB (Mongoose), Redis</div>
+        <div><strong>Security:</strong> JWT authentication, Role-Based Access Control (RBAC), input validation, rate limiting</div>
+        <div><strong>Architecture:</strong> Multi-tenant design, event-driven systems, background jobs and queues (BullMQ)</div>
+        <div><strong>Tools:</strong> Git & GitHub, Swagger/OpenAPI, Postman, Render</div>
+        <div><strong>Fundamentals:</strong> Java, C, C++, OOP, Data Structures & Algorithms, HTML & CSS</div>
       </div>
     </section>
 
-    <!-- ═══════════ WORK EXPERIENCE ═══════════ -->
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
     <section class="cv-section">
-      <h2 class="cv-section-title">Work Experience</h2>
-
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <span class="cv-entry-role">Backend Developer Intern</span>
-          <span class="cv-entry-period">2024 — Present</span>
+      <h2 class="cv-section-title">Experience</h2>
+      <div class="exp-item">
+        <div class="exp-title-row">
+          Backend Developer Intern (SIWES) <span class="org">— Advantage Health Africa, Lagos · Jul 2026 – Oct 2026</span>
         </div>
-        <div class="cv-entry-org">Advantage Health Africa <span class="cv-entry-location">· Lagos, Nigeria (Hybrid)</span></div>
-        <ul class="cv-entry-bullets">
-          <li>Engineered the Pharmacy Vendor Partnership Statistics API (<code>GET /v1/vendors/rx/{pharmacyId}/partnerships/stats</code>), consolidating total, active, and inactive supplier data into a single low-latency endpoint using NestJS and TypeORM.</li>
-          <li>Contributed to Pharmacy POS backend services enabling pharmacists to select medications, calculate pricing, log sales transactions, and print itemized customer receipts.</li>
-          <li>Modeled normalized relational schemas in PostgreSQL with TypeORM, enforcing foreign key constraints and multi-tenant data isolation per pharmacy.</li>
-          <li>Authored OpenAPI/Swagger endpoint documentation and automated Postman test collections validating authentication guards and edge cases.</li>
-          <li>Collaborated with engineering, clinical, and QA teams using structured Git workflows, code reviews, and branch-based release strategies.</li>
+        <ul class="bullet-list">
+          <li>Built pharmacy backend features in NestJS, TypeORM and PostgreSQL: batch editing (quantity, prices, batch number), a staff list per pharmacy, and a live staff-online count.</li>
+          <li>Developed the Pharmacy Vendor Partnership Statistics endpoint, returning total, active and inactive suppliers in a single request.</li>
+          <li>Researched ML features and evaluation metrics for reorder-quantity recommendations and expiry-risk scoring (LightGBM) as part of the AI/ML effort.</li>
+          <li>Worked through Git branches and code review, with each task reviewed by the engineering lead before merging.</li>
+          <li>Documented endpoints with Swagger and tested them with Postman.</li>
         </ul>
       </div>
     </section>
 
-    <!-- ═══════════ KEY PROJECTS ═══════════ -->
+    <!-- ═══════════ PROJECTS ═══════════ -->
     <section class="cv-section">
-      <h2 class="cv-section-title">Key Projects</h2>
+      <h2 class="cv-section-title">Projects</h2>
 
       <!-- MedTrail -->
-      <div class="cv-project">
-        <div class="cv-project-header">
-          <span class="cv-project-name">MedTrail Healthcare & Clinical API</span>
-          <span class="cv-project-stack">NestJS · TypeScript · PostgreSQL · Redis · JWT</span>
+      <div class="proj-item">
+        <div class="proj-title-row">
+          MedTrail: Medication Management System for Hospitals <span style="font-weight: 400; color: #4b5563;">—</span> <a href="https://medtrail.com.ng" target="_blank">medtrail.com.ng</a>
         </div>
-        <p class="cv-project-desc">
-          Capstone healthcare backend system digitizing clinical workflows across doctors, pharmacists, administrators, and patients.
-        </p>
-        <ul class="cv-project-bullets">
-          <li>Implemented 4-tier Role-Based Access Control (Admin, Doctor, Pharmacist, Patient) with custom NestJS guards and signed JWT tokens.</li>
-          <li>Built electronic prescription generation with pharmacy dispense tracking and clinical audit logging.</li>
-          <li>Integrated Redis caching for high-throughput roster lookups and rate-limiting; automated user onboarding via time-sensitive email tokens (Nodemailer).</li>
+        <div class="proj-stack">NestJS · TypeScript · PostgreSQL · TypeORM · JWT · Redis</div>
+        <ul class="bullet-list">
+          <li>Capstone platform for Nigerian hospitals, built by a two-person backend team and used by four roles: Admin, Doctor, Pharmacist and Patient.</li>
+          <li>Implemented role-based access with custom guards and JWT; admins invite users, doctors prescribe, pharmacists verify and dispense, and patients view their own records.</li>
+          <li>Added validated DTOs, audit logging and PostgreSQL schema design, and deployed the system to the cloud.</li>
         </ul>
-        <a class="cv-project-link" href="https://github.com/samuel2770/MedTrail-Api">github.com/samuel2770/MedTrail-Api</a>
+      </div>
+
+      <!-- Eventful -->
+      <div class="proj-item">
+        <div class="proj-title-row">
+          Eventful: Event Ticketing API
+        </div>
+        <div class="proj-stack">NestJS · MongoDB · Redis · BullMQ · Paystack</div>
+        <ul class="bullet-list">
+          <li>Deployed API with Paystack payments, QR-code ticket scanning, fraud protection, scheduled notifications and Redis-cached analytics.</li>
+          <li>Documented with Swagger.</li>
+        </ul>
       </div>
 
       <!-- Huddle -->
-      <div class="cv-project">
-        <div class="cv-project-header">
-          <span class="cv-project-name">Huddle Collaboration & Workspace API</span>
-          <span class="cv-project-stack">Node.js · Express · MongoDB · WebSockets · JWT</span>
+      <div class="proj-item">
+        <div class="proj-title-row">
+          Huddle: Team Collaboration Backend
         </div>
-        <p class="cv-project-desc">
-          Real-time team collaboration backend supporting multi-tenant workspaces, dynamic channel creation, and instant messaging.
-        </p>
-        <ul class="cv-project-bullets">
-          <li>Engineered bi-directional WebSocket event channels (Socket.IO) for live message broadcasting and presence status pings.</li>
-          <li>Built multi-tenant workspace isolation with tiered role-based permissions (Owner, Admin, Member).</li>
-          <li>Designed MongoDB schemas with compound indexes for message pagination and O(log n) thread lookups.</li>
+        <div class="proj-stack">NestJS · TypeScript · PostgreSQL · Socket.IO</div>
+        <ul class="bullet-list">
+          <li>Slack-style workspace and channel API; resolved merge conflicts and integrated a teammate's auth module.</li>
         </ul>
-        <a class="cv-project-link" href="https://github.com/samuel2770/Huddle-API">github.com/samuel2770/Huddle-API</a>
-      </div>
-
-      <!-- Restaurant Chatbot -->
-      <div class="cv-project">
-        <div class="cv-project-header">
-          <span class="cv-project-name">AI-Powered Restaurant Service Bot</span>
-          <span class="cv-project-stack">Node.js · Express · NLP · State Machine · Webhooks</span>
-        </div>
-        <p class="cv-project-desc">
-          Conversational backend assistant for hospitality venues handling automated menu lookups, order placement, and kitchen dispatch.
-        </p>
-        <ul class="cv-project-bullets">
-          <li>Built session-based dialog manager maintaining order state across conversational turns with fuzzy intent matching.</li>
-          <li>Implemented asynchronous webhook dispatch for kitchen alerts and order confirmations with graceful human-staff fallback.</li>
-        </ul>
-        <a class="cv-project-link" href="https://github.com/samuel2770/Restaurant-chatbot">github.com/samuel2770/Restaurant-chatbot</a>
       </div>
     </section>
 
     <!-- ═══════════ EDUCATION ═══════════ -->
     <section class="cv-section">
       <h2 class="cv-section-title">Education</h2>
-
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <span class="cv-entry-role">Diploma in Software Engineering — Backend Specialization</span>
-          <span class="cv-entry-period">2024 — 2025</span>
+      
+      <div class="edu-item">
+        <div class="edu-title-row">
+          B.Sc. Software Engineering <span class="school">— Thomas Adewumi University, Oko-Irese, Kwara State · Session 2025/2026</span>
         </div>
-        <div class="cv-entry-org">AltSchool Africa</div>
-        <ul class="cv-entry-bullets">
-          <li>Completed rigorous curriculum covering distributed systems, advanced Node.js, NestJS, microservices, database administration, and system design.</li>
-          <li>Architected enterprise capstone projects including the MedTrail Healthcare API.</li>
-          <li>Status: Completed · Verified Graduate (official certificate pending issuance).</li>
-        </ul>
+        <div class="edu-desc">
+          C, C++, Java, OOP, Data Structures & Algorithms, Operating Systems. Member, NACOS.
+        </div>
       </div>
 
-      <div class="cv-entry" style="margin-bottom: 0;">
-        <div class="cv-entry-header">
-          <span class="cv-entry-role">Computer Science & Engineering Foundations</span>
-          <span class="cv-entry-period">Completed</span>
+      <div class="edu-item" style="margin-bottom: 0;">
+        <div class="edu-title-row">
+          Backend Engineering Diploma <span class="school">— AltSchool Africa · 2025 – 2026</span>
         </div>
-        <div class="cv-entry-org">University Academic Studies</div>
-        <ul class="cv-entry-bullets">
-          <li>Core computing principles: C, C++, Java, Object-Oriented Programming, Data Structures, and Algorithms.</li>
-        </ul>
+        <div class="edu-desc">
+          Node.js, Express, NestJS, MongoDB, PostgreSQL, system design, Git.
+        </div>
       </div>
     </section>
 
     <!-- ═══════════ CERTIFICATIONS ═══════════ -->
     <section class="cv-section">
       <h2 class="cv-section-title">Certifications</h2>
-      <ul class="cv-certs-list">
-        <li>
-          <div>
-            <span class="cv-cert-name">AltSchool Africa Backend Engineering Diploma</span>
-            <span class="cv-cert-issuer"> — AltSchool Africa</span>
-          </div>
-          <span class="cv-cert-date">2025 · Completed</span>
-        </li>
-        <li>
-          <div>
-            <span class="cv-cert-name">Verified Skill Assessment</span>
-            <span class="cv-cert-issuer"> — HackerRank (ID: e6eaf8d24f9c)</span>
-          </div>
-          <span class="cv-cert-date">Sept 2026 · Verified</span>
-        </li>
-        <li>
-          <div>
-            <span class="cv-cert-name">Postman API Fundamentals Student Expert</span>
-            <span class="cv-cert-issuer"> — Postman Academy</span>
-          </div>
-          <span class="cv-cert-date">In Progress</span>
-        </li>
-        <li>
-          <div>
-            <span class="cv-cert-name">Back End Development and APIs</span>
-            <span class="cv-cert-issuer"> — freeCodeCamp (300 hrs)</span>
-          </div>
-          <span class="cv-cert-date">In Progress</span>
-        </li>
+      <ul class="bullet-list">
+        <li>AltSchool Africa Backend Engineering Diploma (2025)</li>
+        <li>HackerRank Verified Skill Assessment (Sept 2026)</li>
       </ul>
     </section>
 
@@ -491,4 +357,3 @@
 </body>
 
 </html>
-
